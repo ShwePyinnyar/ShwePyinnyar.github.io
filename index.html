@@ -1,5 +1,9 @@
 <!DOCTYPE HTML>
-
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 	<head>
 		<title>Portfolio</title>
@@ -116,7 +120,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="#">
+							<form method="post" action="https://formspree.io/f/xjgplway">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
@@ -167,28 +171,10 @@
 			</div>
 
 
-			#email 
+			
 			<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-		<script>
-		(function(){
-			emailjs.init("_DltborNqfEUOVHRq");
-		})();
-
-		document.getElementById("contact-form").addEventListener("submit", function(e) {
-			e.preventDefault();
-
-			emailjs.sendForm("service_pvfpewk", "template_ie9sbqb", this)
-			.then(function() {
-				alert("✅ Message sent! I'll get back to you soon.");
-			}, function(error) {
-				alert("❌ Failed to send message.");
-				console.log(error);
-			});
-		});
-		</script>
-
-			
+		
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
