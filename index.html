@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Portfolio</title>
@@ -21,7 +17,7 @@
 					<div id="intro">
 						<h1>Shwe Pyinnyar Paing<br />
 						Portfolio</h1>
-						<p>An analyst with skills in SQL, Python, Excel, Power BI, Tableau, Azure and AWS <br /> <a href="https://github.com/ShwePyinnyar">My Github</a></p>
+						<p>An analyst with skills in SQL, Python, Excel, Power BI Tableau, Azure and AWS <br /> <a href="https://github.com/ShwePyinnyar">My Github</a></p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -119,6 +115,27 @@
 
 				<!-- Footer -->
 					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
 						
 						<section class="split contact">
 							<section class="alt">
@@ -148,6 +165,30 @@
 					</div>
 
 			</div>
+
+
+			#email 
+			<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+		<script>
+		(function(){
+			emailjs.init("_DltborNqfEUOVHRq");
+		})();
+
+		document.getElementById("contact-form").addEventListener("submit", function(e) {
+			e.preventDefault();
+
+			emailjs.sendForm("service_pvfpewk", "template_ie9sbqb", this)
+			.then(function() {
+				alert("✅ Message sent! I'll get back to you soon.");
+			}, function(error) {
+				alert("❌ Failed to send message.");
+				console.log(error);
+			});
+		});
+		</script>
+
+			
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
